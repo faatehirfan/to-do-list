@@ -6,10 +6,10 @@
     </div>
 @endif
 
-<form action="{{ route('tasks.store') }}" method="POST">
+<form action="{{ route('tasks.store') }}" method="POST"> {{-- bila tekan save task, post  hantar data ke request store --}}
 
     @csrf
-
+    
     <input type="text" name="title" placeholder="Task title">
 
     <input type="text" name="description" placeholder="Task description">
@@ -21,3 +21,7 @@
     <button type="submit">Save Task</button>
 
 </form>
+
+<a href="{{ route('tasks.index') }}">
+    View All Tasks
+</a>

@@ -7,4 +7,4 @@ Route::get('/', function () {
     return redirect()->route('tasks.create');
 });
 
-Route::resource('tasks', TaskController::class);
+Route::resource('tasks', TaskController::class); // create all operation.
